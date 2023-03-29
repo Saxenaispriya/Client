@@ -1,0 +1,26 @@
+﻿@model ConsumeWithNewAPI.Models.Root
+
+<h1>Get Temperature</h1>
+
+<form method="post" asp-controller="Weatherinfo" asp-action="GetinfoApi">
+    <!-- form fields go here -->
+    
+
+    <div>
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" name="longitude" />
+    </div>
+    <div>
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" name="latitude" />
+    </div>
+    <button type="submit">Get Temperature</button>
+</form>
+
+<table>
+    <tr>
+        <td>
+          Temperature is shown here: @Model.main.temp;
+        </td>
+    </tr>
+</table>
